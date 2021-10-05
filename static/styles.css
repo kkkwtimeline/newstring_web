@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap');
+
+:root {
+  --button-color: rgb(0, 0, 0);
+  --button-bg-color: #B3B6B7;
+  --button-hover-bg-color: #B3B6B7;
+}
+
+body{
+    font-family: 'Sunflower', sans-serif;
+    background: rgb(242, 241, 248);
+
+}
+
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    background: rgb(219, 245, 229);
+    color: var(--button-color);
+
+    margin: 0;
+    padding: 0.5rem 1rem;
+
+    font-family: 'Sunflower', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+
+    border: none;
+    border-radius: 4px;
+
+    display: inline-block;
+    width: auto;
+
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+button.success {
+    margin-top: 20px;
+    --button-bg-color: hsl(228, 54%, 55%);
+    --button-hover-bg-color: hsl(228, 54%, 55%);
+    color: cornsilk;
+}
+
+button.sub {
+    width: 60px;
+    height: 30px;
+}
+
+button.warning {
+    --button-color: #212529;
+    --button-bg-color: #ffc107;
+    --button-hover-bg-color: #e0a800;
+}
+
+button.hover3:hover{
+    box-shadow: 0 80px 0 0 rgba(0,0,0,0.25) inset,
+        0 -80px 0 0 rgba(0,0,0,0.25) inset;
+
+    --button-bg-color: hsl(219, 54%, 55%);
+    --button-hover-bg-color: hsl(219, 54%, 55%);
+    color: cornsilk;
+}
+
+button.hover4:hover{
+    box-shadow: 0 80px 0 0 rgba(0,0,0,0.25) inset,
+        0 -80px 0 0 rgba(0,0,0,0.25) inset;
+    --button-bg-color: hsl(219, 54%, 55%);
+    --button-hover-bg-color: hsl(219, 54%, 55%);
+    color: cornsilk;
+}
+
+.header{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius:4px;
+    /* border: 1px solid gold; */
+    width: 100%;
+    height: 100px;
+    border-bottom: 2px solid rgb(213, 213, 213);
+}
+
+.footer{
+    text-align: center;
+    border-radius:4px;
+    width: 100%;
+    height: 100px;
+
+}
+
+.subscribe{
+    display: flex;
+    border-radius:10px;
+    height: 300px;
+}
+
+.timeline_head{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius:10px;
+    height: 20%;
+    width:100%;
+}
+
+.header_common{
+    display: inline-block;
+    float: left;
+    width: 33%;
+    border-bottom: None;
+}
+
+.article_common{
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    border-radius: 10px;
+    width: 33%;
+    flex-direction: column;
+    /* border: 1px solid gold; */
+}
+
+.footer_common{
+    margin: auto auto;
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    border-radius:4px;
+    margin-top:20px;
+}
+
+.category{
+    font-family: 'Sunflower', sans-serif;
+    display: flex;
+    border-radius:4px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.move_page_n_btn{
+    text-align: center;
+    border-radius:4px;
+    height: 50px;
+    margin-top:10px;
+    margin-left: 12px;
+    margin-right: 10px;
+}
+
+.subscribe_item_top{
+    display: flex;
+    position: static;
+    height: 60%;
+    width: 100%;
+    
+    border-radius: 10px;
+    margin-top: 2px   
+}
+.subscribe_item_bottom{
+    text-align: left;
+    display: flex;
+    position: static;
+    height: 38%;
+    width: 100%;
+    /* margin-left: 3px;
+    margin-right: 3px; */
+    
+    border-radius: 10px;
+    margin-top: 1px;
+    margin-bottom:1px;
+}
+
+.timeline_common{
+    display: flex;
+    border-radius:4px;
+    height: 400px;
+}
+
+.timeline_item_top{
+    display: flex;
+    position: static;
+    height: 50%;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 2px   
+}
+
+.timeline_item_bottom{
+    text-align: left;
+    display: flex;
+    position: static;
+    height: 50%;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 1px;
+    margin-bottom:1px;
+}
+

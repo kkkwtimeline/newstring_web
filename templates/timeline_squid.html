@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>뉴스트링</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>    
+    <!-- <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="shortcut icon" href="https://newsstring.run.goorm.io/favicon.ico">
+    <style>
+        .keywords{
+            border-radius: 10px;
+            margin-left:8px;
+            margin-right:8px;
+            width: auto;
+            background-color: rgb(219, 245, 229);
+            cursor: pointer;
+        }
+        
+        .keywords{
+            position:relative;
+            bottom: 6.5px;
+        }
+        .similar_div{
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+        }
+        .similar_item{
+            width:100%;
+            height:80px;
+        }
+        .similar_item_top{
+            display: flex;
+            width:100%;
+            height:35%;
+        }
+        .similar_item_bottom{
+            text-align:center;
+            width:100%;
+            height:65%;
+        }
+        .item_top_logo{
+            width:40%;
+        }
+        .item_top_text{
+            width:60%;
+            
+        }
+        .a_p_left{
+            display: inline-block;
+            float:right;
+            margin-right:10px;
+        }
+        .s_p_left{
+            display: inline-block;
+            float:right;
+            margin-top:0px;
+            margin-right:10px;
+            color:blue;
+        }
+        .main_image{
+            width:100%;
+            height:100%;
+            object-fit:scale-down;
+            border-radius:10px;
+        }
+        .mini{
+            height:30px;
+            width:40px;
+            font-size:5px;
+            float:bottom;
+            margin-top:15px;
+            margin-right:50px;
+            background: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <div class="header" style="margin-left:10px;margin-right:10px;">
+        <div class="header header_common" style=margin-left:auto></div>
+        <div class="header header_common" >
+            <a href="http://newsstring.run.goorm.io/">
+                <img src="../static/image/newstring_logo.png" alt="My Image" width="210" height="60" style="margin-top:20px;">
+            </a>
+            <!-- <h1 style="margin-top:40px;">NewString</h1> -->
+        </div>
+        <div class="header header_common" style=margin-right:auto;>
+            <!-- <input type="button" value="구독" id="extraction" style=position:relative;top:40px;> -->
+        </div>
+    </div>
+    
+    <div class="timeline_head" style="margin-left:10px;margin-right:10px;" id="page_1_item_01">
+        <div style="width: 10%;">
+            
+        </div>
+        <div style="width: 80%;margin-top:50px;">
+            <h1>
+                오징어 게임
+            </h1>
+            <h4>
+                구독자 120 명
+            </h4>  
+        </div>
+        <div style="width: 10%;margin-top:115px;">
+            🔔
+            <button type="button" id="time_line" class="button hover3">구독하기</button>
+        </div>
+        
+    </div>
+    
+    <div class="timeline_common" style="margin-left:10px;margin-right:10px;" id="page_1_item_01"><!--맨처음 페이지에서만 사용-->
+        <div class="article_common"><!--시작-->
+            <div class="article_common timeline_item_top"><!--top시작-->
+                <a href="https://www.news1.kr/articles/?4444539" style="width:100%;height:100%;object-fit:scale-down;border-radius:10px;" target=_blank>
+                    <img href="" src="https://image.news1.kr/system/photos/2021/9/23/4983991/article.jpg/dims/optimize" alt="My Image" class="main_image">
+                </a>
+            </div><!--top끝-->
+            <div class="article_common timeline_item_bottom"><!--bottom시작-->
+                <div style="display: inline-block;height:10%;">
+                    <p style="display: inline-block;margin-left:10px;">
+                        뉴스1
+                    </p>
+                    <p class="a_p_left">
+                        일주일 전
+                    </p>
+                </div>
+                <div style="height:45%;text-align: center;">
+                    <h2>
+                        블룸버그 "오징어 게임 등 韓 콘텐츠, 할리우드에 심각한 위협"
+                    </h2>
+                </div>
+                <div style="height:20%;text-align:center;display:flex">
+                    <div class="article_common keywords">
+                        <p class="keywords">
+                            블룸버그
+                        </p>
+                    </div>
+                    <div class="article_common keywords">
+                        <p class="keywords">
+                            한류콘텐츠
+                        </p>
+                    </div>
+                    <div class="article_common keywords">
+                        <p class="keywords">
+                            할리우드위협
+                        </p>
+                    </div>
+                </div>
+                <div style="height:15%;text-align: center;">
+                    <h6 style="float:left;margin-left:10px;">
+                        관련뉴스
+                    </h6>
+                    <button type="button" id="btn1" class="hover4 mini" onclick="button1_click('s_open'+id);">▼</button>
+                </div>
+            </div><!--bottom끝-->
+            <div id="s_openbtn1" class="similar_div"><!--similar_div 시작-->
+                <a href="https://www.ytn.co.kr/_ln/0106_202109271600013567"target=_blank><!--similar_item 시작-->
+                    <div class="similar_item">
+                        <div class="similar_item_top">
+                            <div class="item_top_logo">
+                                <img href="" src="../static/image/logo/ytn.png" alt="My Image" class="main_image">
+                            </div>
+                            <div class="item_top_text">
+                                <h4 class="s_p_left">
+                                    1
+                                </h4>
+                            </div>    
+                        </div>
+                        <div class="similar_item_bottom">
+                            <h4 style="margin-top:8px;">
+                                블룸버그 "오징어 게임 등 한류 콘텐츠가 할리우드 위협"
+                            </h4>
+                        </div>
+                    </div>
+                </a><!--similar_item 끝-->
+                <a href="https://www.mk.co.kr/star/hot-issues/view/2021/09/919915/"target=_blank><!--similar_item 시작-->
+                    <div class="similar_item">
+                        <div class="similar_item_top">
+                            <div class="item_top_logo">
+                                <img href="" src="../static/image/logo/mk.png" alt="My Image" class="main_image">
+                            </div>
+                            <div class="item_top_text">
+                                <h4 class="s_p_left">
+                                    2
+                                </h4>
+                            </div>    
+                        </div>
+                        <div class="similar_item_bottom">
+                            <h4 style="margin-top:8px;">
+                                블룸버그 "'오징어 게임' 등 韓 콘텐츠 할리우드 위협"
+                            </h4>
+                        </div>
+                    </div>
+                </a><!--similar_item 끝-->
+                <a href="https://www.hankookilbo.com/News/Read/A2021092714450003822?did=NA"target=_blank><!--similar_item 시작-->
+                    <div class="similar_item">
+                        <div class="similar_item_top">
+                            <div class="item_top_logo">
+                                <img href="" src="../static/image/logo/korea.png" alt="My Image" class="main_image">
+                            </div>
+                            <div class="item_top_text">
+                                <h4 class="s_p_left">
+                                    3
+                                </h4>
+                            </div>    
+                        </div>
+                        <div class="similar_item_bottom">
+                            <h4 style="margin-top:8px;">
+                                블룸버그 "'오징어게임' 등 한류 콘텐츠, 할리우드에 위협 될 수도"
+                            </h4>
+                        </div>
+                    </div>
+                </a><!--similar_item 끝-->
+                <a href="https://star.mt.co.kr/stview.php?no=2021092715323643254"target=_blank><!--similar_item 시작-->
+                    <div class="similar_item">
+                        <div class="similar_item_top">
+                            <div class="item_top_logo">
+                                <img href="" src="../static/image/logo/star.png" alt="My Image" class="main_image">
+                            </div>
+                            <div class="item_top_text">
+                                <h4 class="s_p_left">
+                                    4
+                                </h4>
+                            </div>    
+                        </div>
+                        <div class="similar_item_bottom">
+                            <h4 style="margin-top:8px;">
+                                블룸버그 "'오징어 게임' 등 韓콘텐츠 주가 폭등..할리우드 위협"
+                            </h4>
+                        </div>
+                    </div>
+                </a><!--similar_item 끝-->
+                <a href="https://www.joongang.co.kr/article/25010014"target=_blank><!--similar_item 시작-->
+                    <div class="similar_item">
+                        <div class="similar_item_top">
+                            <div class="item_top_logo">
+                                <img href="" src="../static/image/logo/joongAng.png" alt="My Image" class="main_image">
+                            </div>
+                            <div class="item_top_text">
+                                <h4 class="s_p_left">
+                                    5
+                                </h4>
+                            </div>    
+                        </div>
+                        <div class="similar_item_bottom">
+                            <h4 style="margin-top:8px;">
+                                '오징어 게임' 테마주 90% 폭등…"韓콘텐트, 할리우드 위협"
+                            </h4>
+                        </div>
+                    </div>
+                </a><!--similar_item 끝-->
+            </div><!--similar_div 끝-->
+        </div><!--끝-->
+        <div style="width:10px"></div>
+        <div class="article_common"><!--시작-->
+            <div class="article_common timeline_item_top">
+                <a href="https://www.news1.kr/articles/?4444539" style="width:100%;height:100%;object-fit:scale-down;border-radius:10px;" target=_blank>
+                    <img href="" src="https://dimg.donga.com/wps/NEWS/IMAGE/2021/09/22/109354066.1.jpg" alt="My Image" class="main_image">
+                </a>
+            </div>
+            <div class="article_common timeline_item_bottom">
+                <div style="display: inline-block;height:10%;">
+                    <p style="display: inline-block;margin-left:10px;">
+                        동아일보
+                    </p>
+                    <p class="a_p_left">
+                        10일 전
+                    </p>
+                </div>
+                <div style="height:45%;text-align: center;">
+                    <h2>
+                        ‘오징어게임’ 한국 드라마 최초 美넷플릭스 1위
+                    </h2>
+                </div>
+                <div style="height:20%;text-align:center;display:flex">
+                    <div class="article_common keywords">
+                        <p class="keywords">
+                            1위
+                        </p>
+                    </div>
+                    <div class="article_common keywords">
+                        <p class="keywords">
+                            넷플릭스
+                        </p>
+                    </div>
+                    <div class="article_common keywords">
+                        <p class="keywords">
+                            최초
+                        </p>
+                    </div>
+                </div>
+                <div style="height:15%;text-align: center;">
+                    <h6 style="float:left;margin-left:10px;">
+                        관련뉴스
+                    </h6>
+                    <button type="button" id="btn2" class="hover4 mini" onclick="button1_click('s_open'+id);">▼</button>
+                </div>
+            </div>
+            <div id="s_openbtn2" class="similar_div"><!--similar_div 시작-->
+                <a href="https://www.yonhapnewstv.co.kr/news/MYH20210923001700640?did=1825m"target=_blank><!--similar_item 시작-->
+                    <div class="similar_item">
+                        <div class="similar_item_top">
+                            <div class="item_top_logo">
+                                <img href="" src="../static/image/logo/yonhap.png" alt="My Image" class="main_image">
+                            </div>
+                            <div class="item_top_text">
+                                <h4 class="s_p_left">
+                                    1
+                                </h4>
+                            </div>    
+                        </div>
+                        <div class="similar_item_bottom">
+                            <h4 style="margin-top:8px;">
+                                '오징어 게임' 한국드라마 최초 美넷플릭스 1위
+                            </h4>
+                        </div>
+                    </div>
+                </a><!--similar_item 끝-->
+                <a href="https://www.hankyung.com/life/article/2021092394707"target=_blank><!--similar_item 시작-->
+                    <div class="similar_item">
+                        <div class="similar_item_top">
+                            <div class="item_top_logo">
+                                <img href="" src="../static/image/logo/hankyung.png" alt="My Image" class="main_image">
+                            </div>
+                            <div class="item_top_text">
+                                <h4 class="s_p_left">
+                                    2
+                                </h4>
+                            </div>    
+                        </div>
+                        <div class="similar_item_bottom">
+                            <h4 style="margin-top:8px;">
+                                '오징어게임' 韓 드라마 최초 美 넷플릭스 1위…"'K-게임' 통했다"
+                            </h4>
+                        </div>
+                    </div>
+                </a><!--similar_item 끝-->
+                <a href="https://www.news1.kr/articles/?4440909"target=_blank><!--similar_item 시작-->
+                    <div class="similar_item">
+                        <div class="similar_item_top">
+                            <div class="item_top_logo">
+                                <img href="" src="../static/image/logo/news1.png" alt="My Image" class="main_image">
+                            </div>
+                            <div class="item_top_text">
+                                <h4 class="s_p_left">
+                                    3
+                                </h4>
+                            </div>    
+                        </div>
+                        <div class="similar_item_bottom">
+                            <h4 style="margin-top:8px;">
+                                '오징어 게임' 美 넷플릭스서 이틀 연속 1위…전세계 2위
+                            </h4>
+                        </div>
+                    </div>
+                </a><!--similar_item 끝-->
+                <a href="https://en.seoul.co.kr/news/newsView.php?id=20210923027018&wlog_tag3=naver"target=_blank><!--similar_item 시작-->
+                    <div class="similar_item">
+                        <div class="similar_item_top">
+                            <div class="item_top_logo">
+                                <img href="" src="../static/image/logo/seoul.png" alt="My Image" class="main_image">
+                            </div>
+                            <div class="item_top_text">
+                                <h4 class="s_p_left">
+                                    4
+                                </h4>
+                            </div>    
+                        </div>
+                        <div class="similar_item_bottom">
+                            <h4 style="margin-top:8px;">
+                                미국 휘감은 K드라마 ‘오징어 게임’
+                            </h4>
+                        </div>
+                    </div>
+                </a><!--similar_item 끝-->
+            </div><!--similar_div 끝-->
+        </div><!--끝-->
+        <div style="width:10px"></div>
+        <div class="article_common"><!--시작-->
+            <div class="article_common timeline_item_top">
+                <a href="https://www.newsen.com/news_view.php?uid=202003110823312410" style="width:100%;height:100%;object-fit:scale-down;border-radius:10px;" target=_blank>
+                    <img href="" src="https://photo.newsen.com/news_photo/2020/03/11/202003110823312410_2.jpg" alt="My Image" class="main_image">
+                </a>
+            </div>
+            <div class="article_common timeline_item_bottom">
+                <div style="display: inline-block;height:10%;">
+                    <p style="display: inline-block;margin-left:10px;">
+                        MK스포츠
+                    </p>
+                    <p class="a_p_left">
+                        6개월 전
+                    </p>
+                </div>
+                <div style="height:45%;text-align: center;">
+                    <h2>
+                        넷플릭스 ‘오징어 게임’ 이정재X박해수 캐스팅 확정(공식)
+                    </h2>
+                </div>
+                <div style="height:20%;text-align:center;display:flex">
+                    <div class="article_common keywords">
+                        <p class="keywords">
+                            박해수
+                        </p>
+                    </div>
+                    
+                    <div class="article_common keywords">
+                        <p class="keywords">
+                            캐스팅확정
+                        </p>
+                    </div>
+                </div>
+                <div style="height:15%;text-align: center;">
+                    <h6 style="float:left;margin-left:10px;">
+                        관련뉴스
+                    </h6>
+                    <button type="button" id="btn3" class="hover4 mini" onclick="button1_click('s_open'+id);">▼</button>
+                </div>
+            </div>
+        </div><!--끝-->
+        <div style="width:10px"></div>
+        <div class="article_common"><!--시작-->
+            <div class="article_common timeline_item_top">
+                <a href="http://mksports.co.kr/view/2019/943527/" style="width:100%;height:100%;object-fit:scale-down;border-radius:10px;" target=_blank>
+                    <img href="" src="http://file.mk.co.kr/meet/neds/2019/11/image_readtop_2019_943527_15736994603976350.jpg" alt="My Image" class="main_image">
+                </a>
+            </div>
+            <div class="article_common timeline_item_bottom">
+                <div style="display: inline-block;height:10%;">
+                    <p style="display: inline-block;margin-left:10px;">
+                        MK스포츠
+                    </p>
+                    <p class="a_p_left">
+                        2년 전
+                    </p>
+                </div>
+                <div style="height:45%;text-align: center;">
+                    <h2>
+                        이정재 측 “넷플릭스 ‘오징어게임’ 제안 받고 검토 중”(공식입장)
+                    </h2>
+                </div>
+                <div style="height:20%;text-align:center;display:flex">
+                    <div class="article_common keywords">
+                        <p class="keywords">
+                            이정제
+                        </p>
+                    </div>
+                    
+                    <div class="article_common keywords">
+                        <p class="keywords">
+                            오징어 게임
+                        </p>
+                    </div>
+                    
+                    <div class="article_common keywords">
+                        <p class="keywords">
+                            제안
+                        </p>
+                    </div>
+                </div>
+                <div style="height:15%;text-align: center;">
+                    <h6 style="float:left;margin-left:10px;">
+                        관련뉴스
+                    </h6>
+                    <button type="button" id="btn4" class="hover4 mini" onclick="button1_click('s_open'+id);">▼</button>
+                </div>
+            </div>
+        </div><!--끝-->
+    </div>
+    
+    <!-- 아직 버튼 id 안정함 -->
+    <!-- <div class="move_page_n_btn"> 
+        <button type="button" id="" class="button hover3" style="float: left;">◀</button>
+        <button type="button" id="" class="button hover3" style="float: right;">▶</button>
+    </div>
+    
+    <div class='footer' id="footer_btn_div">
+        <div class="footer footer_common" style=margin-right:auto>
+            <button type="button" id="time_line" class="button hover3">타임라인</button>
+        </div>
+
+        <div class="footer footer_common" style=margin-left:auto>
+            <button type="button" id="similar_articles" class="button hover3">유사기사</button>
+        </div>
+    </div> -->
+<script>
+    document.getElementById('s_openbtn1').style.display = "none";
+    document.getElementById('s_openbtn2').style.display = "none";
+    function button1_click(s) {
+        if (document.getElementById(s).style.display != "none"){
+            document.getElementById(s).style.display = "none";
+            const btnElement = document.getElementById(s.substr(6, 4));
+            btnElement.innerText = "▼";
+        }
+        else{
+        document.getElementById(s).style.display = "";
+            const btnElement = document.getElementById(s.substr(6, 4));
+            btnElement.innerText = "▲";
+        }
+    }
+</script>
+</body>
+</html>
