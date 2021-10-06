@@ -80,9 +80,9 @@ async def favicon():
 async def read_item(request: Request):
     return templates.TemplateResponse("main_page.html", {"request": request, "id": None})
 
-@app.get("/squid/", response_class=HTMLResponse)
-async def read_item(request: Request):
-    return templates.TemplateResponse("timeline_squid.html", {"request": request, "id": None})
+@app.get("/timeline/{id}", response_class=HTMLResponse)
+async def read_item(request: Request, id: str):
+    return templates.TemplateResponse("timeline_"+id+".html", {"request": request, "id": id})
 
 @app.post("/items/")
 async def create_item(item: Item):
