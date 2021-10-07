@@ -38,10 +38,10 @@
     </div>
     
     <div class="subscribe" style="margin-left:10px;margin-right:10px;" id="page_1_item_01"><!--맨처음 페이지에서만 사용-->
-        <div class="article_common">
+        <div class="article_common" id="slide_ex_l">
             <a href="https://newsstring.run.goorm.io/timeline/1">
                 <div class="article_common subscribe_item_top">
-                    <img src="https://image.ytn.co.kr/general/jpg/2021/0927/202109271600013567_d.jpg" alt="My Image" class="issue_image">
+                    <img src="https://image.fnnews.com/resource/media/image/2021/09/29/202109291337142855_l.jpg" alt="My Image" class="issue_image">
                 </div>
             </a>
             <div class="article_common subscribe_item_bottom">
@@ -49,7 +49,7 @@
                     오징어게임
                 </h2>
                 <h6>
-                    구독자수
+                    구독자 4,560 명
                 </h6>
             </div>
         </div>
@@ -63,7 +63,21 @@
                     고발사주 의혹
                 </h2>
                 <h6>
-                    구독자수
+                    구독자 3,852 명
+                </h6>
+            </div>
+        </div>
+        <div style="width:30px"></div>
+        <div class="article_common">
+            <div class="article_common subscribe_item_top">
+                <img src="https://img.seoul.co.kr/img/upload/2021/10/07/SSI_2021100710155000_O2.jpg" alt="My Image" class="issue_image">
+            </div>
+            <div class="article_common subscribe_item_bottom">
+                <h2>
+                    코로나 백신 부작용
+                </h2>
+                <h6>
+                    구독자 2,863 명
                 </h6>
             </div>
         </div>
@@ -77,12 +91,12 @@
                     북한 미사일 발사
                 </h2>
                 <h6>
-                    구독자수
+                    구독자 4,135 명
                 </h6>
             </div>
         </div>
         <div style="width:30px"></div>
-        <div class="article_common">
+        <div class="article_common" id="slide_ex_r">
             <div class="article_common subscribe_item_top">
                 <img src="https://img.hani.co.kr/imgdb/resize/2018/0731/00501244_20180731.JPG" alt="My Image" class="issue_image">
             </div>
@@ -91,7 +105,7 @@
                     말레이 항공기 실종
                 </h2>
                 <h6>
-                    구독자수
+                    구독자 1,124 명
                 </h6>
             </div>
         </div>
@@ -100,9 +114,9 @@
     
     <!-- 아직 버튼 id 안정함 -->
     <div class="move_page_n_btn"> 
-        <button type="button" id="" class="button hover3" style="float: left;">◀</button>
+        <button type="button" id="left_up" class="button hover3" style="float: left;" onclick="move_l();">◀</button>
         <!-- <span>○●</span> -->
-        <button type="button" id="" class="button hover3" style="float: right;">▶</button>
+        <button type="button" id="right_down" class="button hover3" style="float: right;" onclick="move_r();">▶</button>
     </div>
     
     <div class="category">
@@ -119,7 +133,7 @@
                     온라인 플랫폼 규제
                 </h2>
                 <h6>
-                    구독자수
+                    구독자 2,586 명
                 </h6>
             </div>
         </div>
@@ -133,7 +147,7 @@
                     남중국해 분쟁
                 </h2>
                 <h6>
-                    구독자수
+                    구독자 1,567 명
                 </h6>
             </div>
         </div>
@@ -147,7 +161,7 @@
                     미얀마 쿠테타
                 </h2>
                 <h6>
-                    구독자수
+                    구독자 2,341 명
                 </h6>
             </div>
         </div>
@@ -163,7 +177,7 @@
                     아프간 점령
                 </h2>
                 <h6>
-                    구독자수
+                    구독자 1,953 명
                 </h6>
             </div>
         </div>
@@ -191,7 +205,7 @@
                     구멍난 전자발찌 관리 감독
                 </h2>
                 <h6>
-                    구독자수
+                    구독자 2,859 명
                 </h6>
             </div>
         </div>
@@ -206,7 +220,7 @@
                     쌍용차 인수
                 </h2>
                 <h6>
-                    구독자수
+                    구독자 1,021 명
                 </h6>
             </div>
         </div>
@@ -221,7 +235,7 @@
                     코로나 치료제
                 </h2>
                 <h6>
-                    구독자수
+                    구독자 2,413 명
                 </h6>
             </div>
         </div>
@@ -236,7 +250,7 @@
                     헝다 위기
                 </h2>
                 <h6>
-                    구독자수
+                    구독자 1,638 명
                 </h6>
             </div>
         </div>
@@ -258,6 +272,44 @@
             <button type="button" id="similar_articles" class="button hover3">유사기사</button>
         </div>
     </div> -->
-
+<script>
+    document.getElementById('slide_ex_r').style.display = "none";
+    
+    function button1_click(s) {
+        if (document.getElementById(s).style.display != "none"){
+            document.getElementById(s).style.display = "none";
+            const btnElement = document.getElementById(s.substr(6, 4));
+            btnElement.innerText = "▼";
+        }
+        else{
+            document.getElementById(s).style.display = "";
+            const btnElement = document.getElementById(s.substr(6, 4));
+            btnElement.innerText = "▲";
+        }
+    }
+    
+    function move_r() {
+        if (document.getElementById("slide_ex_r").style.display != "none"){
+            alert("마지막 이슈입니다.");
+        }
+        else{
+            document.getElementById("slide_ex_r").style.display = "";
+            document.getElementById("slide_ex_l").style.display = "none";
+            
+        }
+    };
+    
+    function move_l() {
+        if (document.getElementById("slide_ex_l").style.display != "none"){
+            alert("첫번째 이슈입니다.");
+        }
+        else{
+            document.getElementById("slide_ex_r").style.display = "none";
+            document.getElementById("slide_ex_l").style.display = "";
+            
+        }
+    };
+    
+</script>
 </body>
 </html>
