@@ -18,7 +18,7 @@ news_searching_api_url = 'http://tools.kinds.or.kr:8888/search/news'
 keyword_api_url = 'http://tools.kinds.or.kr:8888/keyword'
 
 news_searching_api = {
-    "access_key": "9af2f705-2974-4340-8b55-d69040b944ab",
+    "access_key": "",
     "argument": {
         "query": "",
         "published_at": {
@@ -50,7 +50,7 @@ news_searching_api = {
 }
 
 keyword_api = {
-    "access_key": "9af2f705-2974-4340-8b55-d69040b944ab",
+    "access_key": "",
     "argument": {
         "title": ""
     }
