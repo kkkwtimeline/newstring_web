@@ -79,7 +79,7 @@
             float:bottom;
             margin-top:15px;
             margin-right:50px;
-            background: rgb(255, 255, 255);
+            background-color: rgb(235, 235, 235);
         }
         .mini_image{
             width:60%;
@@ -90,6 +90,24 @@
         .timeline_item_bottom{
             border-bottom: 2px solid rgb(213, 213, 213);
         }
+        .detail_choice_button{
+            width:45%;
+            height:auto;
+            margin-left:5px;
+            margin-right:5px;
+            margin-top:5px;
+            margin-bottom:5px;
+            font-size:5;
+        }
+        .detail_issue{
+            width:500px;
+            height:auto;
+            background-color: rgb(255, 255, 255);
+            margin-top:-15px;
+            margin-bottom:20px;
+            margin-left:10px;
+            border-radius:10px;
+        }
     </style>
 </head>
 <body>
@@ -97,7 +115,7 @@
         <div class="header header_common" style=margin-left:auto></div>
         <div class="header header_common" >
             <a href="http://newsstring.run.goorm.io/">
-                <img src="../static/image/newsting_logo_2.png" alt="My Image" width="120" height="60" style="margin-top:20px;">
+                <img src="../static/image/newstring_logo_3.png" alt="My Image" width="65" height="65" style="margin-top:20px;">
             </a>
             <!-- <h1 style="margin-top:40px;">NewString</h1> -->
         </div>
@@ -111,12 +129,14 @@
             
         </div>
         <div style="width: 20%;margin-top:20px;">
-            <h1>
-                오징어 게임
+            <h1 id="isseu_title">
+                오징어게임
             </h1>
             <h4>
                 구독자 4,560 명
-            </h4>  
+            </h4>
+            <button type="button" id="issue_detail" class="hover4 mini" onclick="button2_click('open_issue_detail');" style="margin-left:55px;margin-bottom:20px;">▼</button>
+
         </div>
         <div style="width: 70%;margin-top:30px;"><!-- 해당이슈 요약, 키워드 필드 -->
             <h2>
@@ -146,6 +166,14 @@
         <div style="width: 10%;margin-top:90px;">
             🔔
             <button type="button" id="time_line" class="button hover3">구독중</button>
+        </div>
+    </div>
+    <div class="detail_issue" id="open_issue_detail" style="display:none;">
+        <div style="margin-left:20px;">
+            <button class="detail_choice_button" onclick="button3_click(value);" value="넷플릭스">넷플릭스</button>
+            <button class="detail_choice_button" onclick="button3_click(value);" value="오징어게임">오징어게임</button>
+            <button class="detail_choice_button" onclick="button3_click(value);" value="오징어게임 장난전화">오징어게임 장난전화</button>
+            <button class="detail_choice_button" onclick="button3_click(value);" value="드라마">드라마</button>
         </div>
         
     </div>
@@ -688,6 +716,24 @@
             const btnElement = document.getElementById(s.substr(6, 4));
             btnElement.innerText = "▲";
         }
+    }
+    
+    function button2_click(s) {
+        if (document.getElementById('open_issue_detail').style.display != "none"){
+            document.getElementById('open_issue_detail').style.display = "none";
+            const btnElement = document.getElementById('issue_detail');
+            btnElement.innerText = "▼";
+        }
+        else{
+            document.getElementById('open_issue_detail').style.display = "";
+            const btnElement = document.getElementById('issue_detail');
+            btnElement.innerText = "▲";
+        }
+    }
+    
+    function button3_click(s) {
+        const btnElement = document.getElementById('isseu_title');
+        btnElement.innerText = s;
     }
     
     function move_r() {
